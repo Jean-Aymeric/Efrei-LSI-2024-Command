@@ -10,7 +10,7 @@ Command::Command(std::string numCommand, std::string date) {
 }
 
 void Command::addLine(CommandLine commandLine) {
-	for (CommandLine line : this->commandLines) {
+	for (CommandLine &line : this->commandLines) {
 		if (line.getArticle() == commandLine.getArticle()) {
 			line.setQuantity(line.getQuantity() + commandLine.getQuantity());
 			return;
